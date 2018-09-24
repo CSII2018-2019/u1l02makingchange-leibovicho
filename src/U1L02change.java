@@ -32,6 +32,12 @@ print(“You have “ + nickels + “nickels and “ + pennies + “ pennies.”
 	}
 	JOptionPane.showMessageDialog(null, cash + " is " + quaters +
 	" quarters, " + nickles + " nickles, and " + pennies + " pennies.");*/
+int quarters = 0;
+int quarters2 = 0;
+int dimes = 0;
+int dimes2 = 0;
+int nickles = 0;
+int nickles2 = 0;
 int pennies = 0;
 int pennies2 = 0;
 		
@@ -44,7 +50,26 @@ double change2 = Double.parseDouble(answer2);
 pennies2 = (int)(change2);
 
 JOptionPane.showMessageDialog(null, "The average of your two values is " + (pennies+pennies2)/2);
-	
+
+quarters = (pennies/25);
+pennies = pennies%25;
+dimes = pennies/10;
+pennies = pennies%10;
+nickles = pennies/5;
+pennies = pennies%5;
+
+quarters2 = (pennies2/25);
+pennies2 = pennies2%25;
+dimes2 = pennies2/10;
+pennies2 = pennies2%10;
+nickles2 = pennies2/5;
+pennies2 = pennies2%5;
+
+JOptionPane.showMessageDialog(null, "Your first amount has " + quarters + " quaters, " + dimes + " dimes, "
+		+ nickles + " nickles, and " + pennies + " pennies.");
+JOptionPane.showMessageDialog(null, "Your second amount has " + quarters2 + " quaters, " + dimes2 + " dimes, "
+		+ nickles2 + " nickles, and " + pennies2 + " pennies.");
+
 	}
 
 }
